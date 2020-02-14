@@ -1,6 +1,8 @@
 import org.junit.Test;
 import org.junit.Assert.*;
 
+import static org.junit.Assert.assertEquals;
+
 public class CodeRetreatTest5 {
   
   @Test
@@ -15,8 +17,11 @@ public class CodeRetreatTest5 {
     grid.set(1, 2, 1);
   }
   
-  /*@Test
+  @Test
   public void testGetAlive(){
   
-  }*/
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(1, 2, 1);
+    assertEquals(grid.get(1, 2), 1);
+  }
 }

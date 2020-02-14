@@ -9,4 +9,8 @@ public class Grid5 {
   public void set(int x, int y, int set) {
     grid[x][y] = set;
   }
+  
+  public int get(int x, int y) {
+    return grid[x][y];
+  }
 }
