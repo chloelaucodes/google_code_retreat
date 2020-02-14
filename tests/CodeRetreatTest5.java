@@ -1,6 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class CodeRetreatTest5 {
 
@@ -46,6 +47,6 @@ public class CodeRetreatTest5 {
   @Test
   public void testNextBoard(){
     Grid5 grid = new Grid5(5, 5);
-    assertEquals(grid, grid.nextBoard());
+    assertNotEquals(grid, grid.nextBoard());
   }
 }

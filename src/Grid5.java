@@ -27,6 +27,13 @@ public class Grid5 {
   }
   
   public Grid5 nextBoard(){
-    return this;
+    
+    Grid5 newGrid = new Grid5(grid.length, grid[0].length);
+    for (int i = 0; i < grid.length; i++) {
+      for (int j = 0; j < grid[0].length; j++) {
+      
+      }
+      }
+    return newGrid;
   }
 }
