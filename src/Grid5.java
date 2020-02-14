@@ -33,6 +33,10 @@ public class Grid5 {
       for (int j = 0; j < grid[0].length; j++) {
         if (getNeighbors(i, j) < 2 || getNeighbors(i, j) >=4) {
           newGrid.set(i, j, 0);
+        } else if (getNeighbors(i, j) == 3){
+          newGrid.set(i, j, 1);
+        } else if (get(i, j) == 1 && getNeighbors(i, j) == 2){
+          newGrid.set(i, j, 1);
         }
         
       }

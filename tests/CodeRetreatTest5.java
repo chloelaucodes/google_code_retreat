@@ -68,4 +68,24 @@ public class CodeRetreatTest5 {
     Grid5 newGrid = grid.nextBoard();
     assertEquals(0, newGrid.get(2, 1));
   }
+  
+  @Test
+  public void testBorn(){
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(1, 2, 1);
+    grid.set(1, 1, 1);
+    grid.set(3, 1, 1);
+    Grid5 newGrid = grid.nextBoard();
+    assertEquals(1, newGrid.get(2, 1));
+  }
+  
+  @Test
+  public void testSurvive(){
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(1, 2, 1);
+    grid.set(1, 1, 1);
+    grid.set(1, 3, 1);
+    Grid5 newGrid = grid.nextBoard();
+    assertEquals(1, newGrid.get(1, 2));
+  }
 }
