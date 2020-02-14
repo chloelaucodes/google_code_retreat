@@ -49,4 +49,12 @@ public class CodeRetreatTest5 {
     Grid5 grid = new Grid5(5, 5);
     assertNotEquals(grid, grid.nextBoard());
   }
+  
+  @Test
+  public void testDie(){
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(1, 2, 1);
+    Grid5 newGrid =grid.nextBoard();
+    assertEquals(0, newGrid.get(1, 2));
+  }
 }

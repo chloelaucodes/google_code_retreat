@@ -25,15 +25,17 @@ public class Grid5 {
     }
     return counter;
   }
-  
-  public Grid5 nextBoard(){
-    
+
+  public Grid5 nextBoard() {
+
     Grid5 newGrid = new Grid5(grid.length, grid[0].length);
     for (int i = 0; i < grid.length; i++) {
       for (int j = 0; j < grid[0].length; j++) {
-      
+        if (getNeighbors(i, j) < 2) {
+          newGrid.set(i, j, 0);
+        }
       }
-      }
+    }
     return newGrid;
   }
 }
