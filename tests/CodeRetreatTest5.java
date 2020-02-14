@@ -42,4 +42,10 @@ public class CodeRetreatTest5 {
     Grid5 grid = new Grid5(5, 5);
     assertEquals(grid.getNeighbors(0, 1), 0);
   }
+  
+  @Test
+  public void testNextBoard(){
+    Grid5 grid = new Grid5(5, 5);
+    assertEquals(grid, grid.nextBoard());
+  }
 }

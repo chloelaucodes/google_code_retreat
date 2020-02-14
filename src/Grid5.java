@@ -26,5 +26,7 @@ public class Grid5 {
     return counter;
   }
   
-  
+  public Grid5 nextBoard(){
+    return this;
+  }
 }
