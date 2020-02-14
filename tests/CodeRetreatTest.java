@@ -27,7 +27,7 @@ public class CodeRetreatTest {
   }
   
   @Test
-  public void testCheckNeighbor1(){
+  public void testCheckNeighbor(){
     Grid grid = new Grid();
     assertEquals(0, grid.countAliveNeighbors(2, 2));
   }
