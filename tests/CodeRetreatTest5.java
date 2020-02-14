@@ -9,10 +9,11 @@ public class CodeRetreatTest5 {
   
   }
   
-  /*@Test
-  public void testSetAlive(){
-  
-  }*/
+  @Test
+  public void testSet(){
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(1, 2, 1);
+  }
   
   /*@Test
   public void testGetAlive(){
