@@ -16,6 +16,15 @@ public class Grid5 {
   
   
   public int getNeighbors(int x, int y) {
-    return 0;
+    int counter = 0;
+    for (int i = x - 1; i < x + 2; i++) {
+      for(int j = y - 1; j < y + 2; j++) {
+        if (i == x && j == y){
+          continue;
+        }
+      counter += get(i,j);
+      }
+    }
+    return counter;
   }
 }
