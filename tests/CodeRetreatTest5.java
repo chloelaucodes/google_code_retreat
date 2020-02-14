@@ -15,6 +15,12 @@ public class CodeRetreatTest5 {
     Grid5 grid = new Grid5(5, 5);
     grid.set(1, 2, 1);
   }
+  
+  @Test (expected = IndexOutOfBoundsException.class)
+  public void testSetOutOfBounds() {
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(-6, 2, 1);
+  }
 
   @Test
   public void testGetAlive() {
@@ -22,6 +28,14 @@ public class CodeRetreatTest5 {
     Grid5 grid = new Grid5(5, 5);
     grid.set(1, 2, 1);
     assertEquals(grid.get(1, 2), 1);
+  }
+  
+  @Test
+  public void testGetDead() {
+    
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(1, 2, 0);
+    assertEquals(grid.get(1, 2), 0);
   }
 
   @Test
@@ -43,23 +57,23 @@ public class CodeRetreatTest5 {
     Grid5 grid = new Grid5(5, 5);
     assertEquals(grid.getNeighbors(0, 1), 0);
   }
-  
+
   @Test
-  public void testNextBoard(){
+  public void testNextBoard() {
     Grid5 grid = new Grid5(5, 5);
     assertNotEquals(grid, grid.nextBoard());
   }
-  
+
   @Test
-  public void testDie(){
+  public void testDie() {
     Grid5 grid = new Grid5(5, 5);
     grid.set(1, 2, 1);
-    Grid5 newGrid =grid.nextBoard();
+    Grid5 newGrid = grid.nextBoard();
     assertEquals(0, newGrid.get(1, 2));
   }
-  
+
   @Test
-  public void testDie2(){
+  public void testDie2() {
     Grid5 grid = new Grid5(5, 5);
     grid.set(1, 2, 1);
     grid.set(1, 1, 1);
@@ -68,9 +82,9 @@ public class CodeRetreatTest5 {
     Grid5 newGrid = grid.nextBoard();
     assertEquals(0, newGrid.get(2, 1));
   }
-  
+
   @Test
-  public void testBorn(){
+  public void testBorn() {
     Grid5 grid = new Grid5(5, 5);
     grid.set(1, 2, 1);
     grid.set(1, 1, 1);
@@ -78,9 +92,9 @@ public class CodeRetreatTest5 {
     Grid5 newGrid = grid.nextBoard();
     assertEquals(1, newGrid.get(2, 1));
   }
-  
+
   @Test
-  public void testSurvive(){
+  public void testSurvive() {
     Grid5 grid = new Grid5(5, 5);
     grid.set(1, 2, 1);
     grid.set(1, 1, 1);
