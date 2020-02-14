@@ -13,4 +13,9 @@ public class Grid5 {
   public int get(int x, int y) {
     return grid[x][y];
   }
+  
+  
+  public int getNeighbors(int x, int y) {
+    return 0;
+  }
 }

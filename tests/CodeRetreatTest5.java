@@ -24,4 +24,13 @@ public class CodeRetreatTest5 {
     grid.set(1, 2, 1);
     assertEquals(grid.get(1, 2), 1);
   }
+  
+  @Test
+  public void testGetNeighbors(){
+    Grid5 grid = new Grid5(5, 5);
+    grid.set(1, 2, 1);
+    assertEquals(grid.getNeighbors(1, 2), 0);
+  }
+/*  @Test
+  public void testGetAlive(){}*/
 }
