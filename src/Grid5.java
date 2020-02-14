@@ -6,7 +6,7 @@ public class Grid5 {
   }
   
   
-  public void set(int i, int i1, int i2) {
-    grid[i][i1] = i2;
+  public void set(int x, int y, int set) {
+    grid[x][y] = set;
   }
 }
