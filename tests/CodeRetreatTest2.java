@@ -75,11 +75,11 @@ public class CodeRetreatTest2 {
     assertEquals(grid.nextValue(2, 1), 1);
   }
   
-  @Test
+ /* @Test
   public void testGenerateGrid(){
     Grid2 grid = new Grid2(5, 5);
     Grid2 grid2 = new Grid2(5, 5);
     grid2.setDead(2, 2);
     assertEquals(grid.generateGrid(), grid2);
-  }
+  }*/
 }
